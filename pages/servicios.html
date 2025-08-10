@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sweet cake</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/img/logogastro.webp" alt="logo de Sweet cake">
+        </div>
+        <h1 class="titulo">Servicios</h1>
+        <nav >
+            <ul class="enlacesRelativos">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Nustros productos</a></li>
+                <li><a href="./infolocal.html">Sobre nosotros</a></li>
+                <li><a href="./sedes.html">Donde encontrarnos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="servicio">
+            <!-- tipos de servicios -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEfaVxBLxAY?si=Q63OgrfHKMN1HrpG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="txtInfo">Recibimos encargos de tortas personalizadas o cajas de pasteles dulces y chocolates</p>
+        </section>
+        <section class="servicio">
+            <img src="../assets/img/imagenEvento.webp" alt="Menu para un evento">
+            <p class="txtInfo">Tambien hacemos menues para todo tipos de eventos</p>
+        </section>
+        <section class="servicio">
+            <p class="txtInfo">Otro de nuestros servicios es que nos podes hacer un pedio enviandonos un mensaje al numero 1158462843 y los podes retirar en la sede mas cercana o podes abonar el envio</p>
+        </section>
+
+        <!-- formulario -->
+         <h2 class="subTitulo">Contacto</h2>
+         <section class="formulario">
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" id="nombre"><br></br>
+                <label for="servicio">Tipo de servicio</label>
+                <select name="opcion" id="opcion">
+                    <option value="torta">Torta personalizada</option>
+                    <option value="evento">Menu para evento</option>
+                    <option value="delivery">Pedido</option>
+                </select>
+
+                <textarea name="descripcoin" id="descripcion"></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+         </section>
+    </main>
+     <footer>
+        <!-- enlaces -->
+        <div>
+            <ul class="enlacesRelativos">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Nustros productos</a></li>
+                <li><a href="./infolocal.html">Sobre nosotros</a></li>
+                <li><a href="./sedes.html">Donde encontrarnos</a></li>
+            </ul>
+        </div>    
+    </footer>
+
+<!-- script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
