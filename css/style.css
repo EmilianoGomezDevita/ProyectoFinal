@@ -38,6 +38,8 @@ header {
 .logo img {
   width: 60px;
   height: 60px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
 /* Títulos */
@@ -130,18 +132,6 @@ p {
   text-align: center;
 }
 
-.txtInfo {
-  font-size: 14px;
-  color: var(--color-texto-claro);
-  text-align: left;
-}
-
-.servicio p {
-  font-size: 14px;
-  color: var(--color-texto-claro);
-  text-align: center;
-}
-
 .sedes p {
   text-align: center;
   color: var(--color-texto-claro);
@@ -209,15 +199,57 @@ main {
   justify-content: space-around;
 }
 
-.servicio {
-  background-color: white;
-  text-align: center;
+.solo-texto{
+  display: grid;
+  grid-column: 1 / span 2 ;
 }
+
+.visual iframe{
+  height: 250px; /* Ajusta la altura para que coincida con el texto */
+  max-width: 90%;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+.visual img{
+  border-radius: 15px;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.txtInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Esto centra horizontalmente el contenido */
+}
+
+.solo-texto p{
+  margin-top: 15px ;
+}
+
+.servicios-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* Formulario */
 .formulario {
-  background-color: white;
+  background-color: var(--color-secundario);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px !important;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #5d4037;
 }
 
 .formulario label {
@@ -226,33 +258,20 @@ main {
   font-size: 14px;
 }
 
-.formulario input[type="text"] {
-  font-size: 14px;
-  font-family: "Quicksand", sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-}
-
-.formulario select {
-  font-size: 14px;
-  font-family: "Quicksand", sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-}
-
+.formulario input,
+.formulario select,
 .formulario textarea {
-  font-size: 14px;
-  font-family: "Quicksand", sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid var(--color-acento);
 }
 
 .formulario input[type="submit"] {
-  background-color: var(--color-principal);
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .formulario input[type="submit"]:hover {
@@ -262,6 +281,7 @@ main {
 /* Footer */
 footer {
   background-color: var(--color-secundario);
+  margin-top: 15px;
 }
 
 footer a {
