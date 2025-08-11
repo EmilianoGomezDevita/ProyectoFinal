@@ -275,6 +275,39 @@ main.cuerpoPrincipal {
   align-items: center;
 }
 
+@media(max-width: 800px){
+  .servicios-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .visual,.txtInfo{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .visual iframe,.visual img{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .servicio.solo-texto{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .formulario-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+}
+
 
 /* Formulario */
 .formulario {
