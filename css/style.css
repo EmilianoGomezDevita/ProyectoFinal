@@ -111,15 +111,20 @@ p {
   text-align: center;
 }
 
-/* Imágenes */
-.carousel-item {
-  transition: transform 0.6s ease-in-out;
-}
-.carousel-item img {
-  max-height: 500px; /* o el alto que quieras */
-  object-fit: contain;
+/* CARDS */
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction:row;
 }
 
+.card-body{
+  height: auto;
+  overflow: hidden;
+}
+
+/* Imágenes */
  .img-index {
   display: block;
   margin-left: auto;
