@@ -360,14 +360,14 @@ main.cuerpoPrincipal {
   background-color: green;
 }
 
-/* Footer responsive */
+/* Footer */
 footer {
   background-color: #f4e4d6;
   margin-top: 15px;
   padding: 20px 10px;
 }
 
-footer nav.enlacesRelativos {
+footer div.enlacesRelativos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -390,7 +390,7 @@ footer a:hover {
   background: #f4e4d6;
 }
 
-/* Responsive para celulares */
+/* footer Responsive para celulares */
 @media (max-width: 800px) {
   footer nav.enlacesRelativos {
     display: flex;
