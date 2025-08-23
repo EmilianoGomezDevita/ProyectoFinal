@@ -141,19 +141,23 @@ section.sobre-nosotros {
   background-color: white;
   text-align: center;
 }
-section.sobre-nosotros img.img-index {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-}
 section.sobre-nosotros img.img-index p.txtInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; /* Esto centra horizontalmente el contenido */
+}
+
+/* productos(main) */
+main.cuerpoPrincipal-Productos div.conatiner-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+main.cuerpoPrincipal-Productos div.conatiner-cards div.card-body {
+  height: auto;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=estilos.css.map */

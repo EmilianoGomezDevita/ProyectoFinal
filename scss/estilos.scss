@@ -148,12 +148,7 @@ section.sobre-nosotros {
   background-color: white;
   text-align: center;
   img.img-index {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+    @extend .img-index;
     p.txtInfo {
       display: flex;
       flex-direction: column;
@@ -161,5 +156,20 @@ section.sobre-nosotros {
       align-items: center; /* Esto centra horizontalmente el contenido */
     }
   }
+
+}
+
+/* productos(main) */
+main.cuerpoPrincipal-Productos{
+    div.conatiner-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+        div.card-body{
+            height: auto;
+            overflow: hidden; 
+        }
+    }
 
 }
