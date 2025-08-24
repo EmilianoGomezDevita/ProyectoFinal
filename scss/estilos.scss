@@ -8,11 +8,23 @@
   box-sizing: border-box;
 }
 
+/* Extend */
+
+%img-index {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Variables */
 $body-Color: #5d4037;
 $color-Fondo: #faf8f5;
 $footer-Color: #f4e4d6;
 $enlacesHover-Color: #b8956a;
+$titulos-Color: #d4a574;
 
 /* Estilos generales */
 body {
@@ -23,7 +35,7 @@ body {
 
 /* Header */
 header {
-  background-color: #f4e4d6;
+  background-color: $footer-Color;
 }
 
 .logo-titulo {
@@ -40,7 +52,7 @@ header {
     border-radius: 10px;
   }
   h1.titulo {
-    color: #d4a574;
+    color: $titulos-Color;
     font-size: 30px;
     text-align: center;
     font-weight: bold;
@@ -63,59 +75,47 @@ footer {
   background-color: $footer-Color;
   margin-top: 15px;
   padding: 20px 10px;
+
   div.enlacesRelativos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    a {
-      color: $body-Color;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background 0.2s;
+    width: 100%;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
     }
-    a:hover {
-      color: $enlacesHover-Color;
-      text-decoration: underline;
-      background: $footer-Color;
+    li {
+      a {
+        color: $body-Color;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: background 0.2s;
+      }
+      a:hover {
+        color: $enlacesHover-Color;
+        text-decoration: underline;
+        background: $footer-Color;
+      }
     }
   }
 }
 
 /* Títulos */
 h1.titulo {
-  color: #d4a574;
+  color: $titulos-Color;
   font-size: 30px;
   text-align: center;
   font-weight: bold;
 }
 
 .subTitulo {
-  color: #d4a574;
+  color: $titulos-Color;
   font-size: 25px;
   text-align: center;
   font-weight: bold;
-}
-
-/* Navegación */
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  .enlacesRelativos li a {
-    text-decoration: none;
-    color: #5d4037;
-    font-weight: bold;
-    font-size: 18px;
-  }
-}
-.enlacesRelativos li a:hover {
-  color: $enlacesHover-Color;
-  text-decoration: underline;
 }
 
 /* Index(main) */
@@ -124,21 +124,16 @@ main.cuerpoPrincipal {
   max-width: 900px;
   margin: 40px auto 0 auto;
   padding: 20px;
-  background: $color-Fondo;
+  background: #fff8f0;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(212, 165, 116, 0.08);
   img.img-index {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-    .txtPrincipal p {
-      font-size: 15px;
-      color: #8d6e63;
-      text-align: center;
-    }
+    @extend %img-index;
+  }
+  .txtPrincipal p {
+    font-size: 15px;
+    color: #8d6e63;
+    text-align: center;
   }
 }
 
@@ -148,28 +143,81 @@ section.sobre-nosotros {
   background-color: white;
   text-align: center;
   img.img-index {
-    @extend .img-index;
-    p.txtInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; /* Esto centra horizontalmente el contenido */
-    }
+    @extend %img-index;
   }
-
+  p.txtInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Esto centra horizontalmente el contenido */
+  }
 }
 
 /* productos(main) */
-main.cuerpoPrincipal-Productos{
-    div.conatiner-cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: row;
-        div.card-body{
-            height: auto;
-            overflow: hidden; 
-        }
+div.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  div.card {
+    width: 18rem;
+    margin: 0; /* quita el margen que tenías con mt-3 */
+    transition: transform 0.2s; /* opcional: para efecto hover */
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
+    div.card-body {
+      height: auto;
+      overflow: hidden;
+    }
+  }
+}
 
+/* Sedes (main) */
+
+section.sedes {
+  background-color: white;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+  div.sede-individual {
+    background-color: $footer-Color;
+    border-radius: 20px;
+    padding: 10px; /* Espacio interno reducido */
+    width: 50%; /* espacio que ocupa c/div */
+    margin: 10px auto; /* Centrado y con poco margen */
+    box-sizing: border-box;
+    display: inline-block; /* Se ajusta al contenido */
+    .nombreSede {
+      color: $titulos-Color;
+      font-size: 1.8em;
+      margin: 30px 0 15px 0;
+      text-align: center;
+      border-top: 2px solid var(--color-secundario);
+      padding-top: 20px;
+    }
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+  iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  p {
+    text-align: center;
+    color: #8d6e63;
+    font-size: 1.1em;
+    margin: 15px 0;
+    background-color: var(--color-secundario);
+    padding: 15px;
+    border-radius: 8px;
+  }
 }

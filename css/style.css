@@ -119,6 +119,19 @@ p {
   flex-direction:row;
 }
 
+.container-cards .card {
+  width: 18rem;
+  margin: 0; /* quita el margen que tenías con mt-3 */
+  transition: transform 0.2s; /* opcional: para efecto hover */
+}
+
+/* opcional: efecto hover en las cards */
+.container-cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
 .card-body{
   height: auto;
   overflow: hidden;

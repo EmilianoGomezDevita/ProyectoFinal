@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+/* Extend */
+section.sobre-nosotros img.img-index, main.cuerpoPrincipal img.img-index {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Variables */
 /* Estilos generales */
 body {
@@ -59,21 +69,23 @@ footer {
   padding: 20px 10px;
 }
 footer div.enlacesRelativos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  width: 100%;
 }
-footer div.enlacesRelativos a {
+footer div.enlacesRelativos ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+footer div.enlacesRelativos li a {
   color: #5d4037;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: background 0.2s;
 }
-footer div.enlacesRelativos a:hover {
+footer div.enlacesRelativos li a:hover {
   color: #b8956a;
   text-decoration: underline;
   background: #f4e4d6;
@@ -94,43 +106,16 @@ h1.titulo {
   font-weight: bold;
 }
 
-/* Navegación */
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-ul .enlacesRelativos li a {
-  text-decoration: none;
-  color: #5d4037;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.enlacesRelativos li a:hover {
-  color: #b8956a;
-  text-decoration: underline;
-}
-
 /* Index(main) */
 main.cuerpoPrincipal {
   max-width: 900px;
   margin: 40px auto 0 auto;
   padding: 20px;
-  background: #faf8f5;
+  background: #fff8f0;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(212, 165, 116, 0.08);
 }
-main.cuerpoPrincipal img.img-index {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  max-width: 100%;
-  height: auto;
-}
-main.cuerpoPrincipal img.img-index .txtPrincipal p {
+main.cuerpoPrincipal .txtPrincipal p {
   font-size: 15px;
   color: #8d6e63;
   text-align: center;
@@ -141,7 +126,7 @@ section.sobre-nosotros {
   background-color: white;
   text-align: center;
 }
-section.sobre-nosotros img.img-index p.txtInfo {
+section.sobre-nosotros p.txtInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,15 +134,71 @@ section.sobre-nosotros img.img-index p.txtInfo {
 }
 
 /* productos(main) */
-main.cuerpoPrincipal-Productos div.conatiner-cards {
+div.container-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
 }
-main.cuerpoPrincipal-Productos div.conatiner-cards div.card-body {
+div.container-cards div.card {
+  width: 18rem;
+  margin: 0; /* quita el margen que tenías con mt-3 */
+  transition: transform 0.2s; /* opcional: para efecto hover */
+}
+div.container-cards div.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+div.container-cards div.card div.card-body {
   height: auto;
   overflow: hidden;
+}
+
+/* Sedes (main) */
+section.sedes {
+  background-color: white;
+  padding: 30px;
+  margin: 30px 0;
+  text-align: center;
+}
+section.sedes div.sede-individual {
+  background-color: #f4e4d6;
+  border-radius: 20px;
+  padding: 10px; /* Espacio interno reducido */
+  width: 50%; /* espacio que ocupa c/div */
+  margin: 10px auto; /* Centrado y con poco margen */
+  box-sizing: border-box;
+  display: inline-block; /* Se ajusta al contenido */
+}
+section.sedes div.sede-individual .nombreSede {
+  color: #d4a574;
+  font-size: 1.8em;
+  margin: 30px 0 15px 0;
+  text-align: center;
+  border-top: 2px solid var(--color-secundario);
+  padding-top: 20px;
+}
+section.sedes div.sede-individual:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+section.sedes iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+section.sedes p {
+  text-align: center;
+  color: #8d6e63;
+  font-size: 1.1em;
+  margin: 15px 0;
+  background-color: var(--color-secundario);
+  padding: 15px;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
