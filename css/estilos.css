@@ -8,7 +8,7 @@
 }
 
 /* Extend */
-section.sobre-nosotros img.img-index, main.cuerpoPrincipal img.img-index {
+main.sobre-nosotros img.img-index, main.cuerpoPrincipal img.img-index {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -130,11 +130,15 @@ main.cuerpoPrincipal .txtPrincipal p {
 }
 
 /*infolocal (main) */
-section.sobre-nosotros {
-  background-color: white;
-  text-align: center;
+main.sobre-nosotros {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  padding: 20px;
+  background: #fff8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(212, 165, 116, 0.08);
 }
-section.sobre-nosotros p.txtInfo {
+main.sobre-nosotros p.txtInfo {
   display: flex;
   flex-direction: column;
   justify-content: center;
