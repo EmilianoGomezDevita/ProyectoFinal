@@ -80,7 +80,7 @@ footer div.enlacesRelativos li a {
   color: #5d4037;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: background 0.2s;
@@ -173,9 +173,9 @@ section.sedes div.sede-individual {
 section.sedes div.sede-individual .nombreSede {
   color: #d4a574;
   font-size: 1.8em;
+  font-weight: bold;
   margin: 30px 0 15px 0;
   text-align: center;
-  border-top: 2px solid var(--color-secundario);
   padding-top: 20px;
 }
 section.sedes div.sede-individual:first-child {
