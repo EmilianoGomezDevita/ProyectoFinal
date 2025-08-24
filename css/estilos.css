@@ -48,9 +48,9 @@ header {
   /* Logo */
 }
 .logo-titulo img.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
 }
 .logo-titulo h1.titulo {
   color: #d4a574;
@@ -280,6 +280,92 @@ div.formulario-container section.formulario input[type=submit] {
 }
 div.formulario-container section.formulario input[type=submit]:hover {
   background-color: #006064;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  footer .enlacesRelativos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 16px;
+  }
+  footer .enlacesRelativos ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  footer .enlacesRelativos a {
+    font-size: 15px;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+@media (max-width: 800px) {
+  section.sedes {
+    padding: 10px;
+    margin: 15px 0;
+  }
+  section.sedes div.sede-individual {
+    width: 95%; /* Ocupa casi todo el ancho en móviles */
+    padding: 8px; /* Espacio interno reducido */
+    margin: 10px auto; /* Centrado */
+    font-size: 1em;
+    display: block; /* Evita desbordes horizontales */
+  }
+  section.sedes div.sede-individual .nombreSede {
+    font-size: 1.2em;
+    margin: 20px 0 10px 0;
+    padding-top: 10px;
+  }
+  section.sedes iframe {
+    max-width: 100%;
+    height: 200px; /* Menor altura en móviles */
+  }
+  section.sedes p {
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 800px) {
+  div.servicios-container div.servicios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  div.servicios-container div.servicios-grid div.visual {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  div.servicios-container div.servicios-grid div.visual iframe,
+  div.servicios-container div.servicios-grid div.visual img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  div.servicios-container div.servicios-grid div.txtInfo {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  div.servicios-container div.servicios-grid div.solo-texto.servicio {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1em;
+  }
+}
+@media (max-width: 800px) {
+  div.container-cards {
+    margin-top: 15px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

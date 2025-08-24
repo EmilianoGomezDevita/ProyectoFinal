@@ -55,9 +55,9 @@ header {
   padding: 15px;
   /* Logo */
   img.logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
   }
   h1.titulo {
     color: $titulos-Color;
@@ -315,3 +315,103 @@ div.formulario-container {
     }
   }
 }
+
+/* RESPONSIVE */
+
+// footer Responsive para celulares
+@media (max-width: 800px) {
+  footer {
+    .enlacesRelativos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 16px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      a {
+        font-size: 15px;
+        padding: 5px 0;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+//Sedes
+@media (max-width: 800px) {
+  section.sedes {
+    padding: 10px;
+    margin: 15px 0;
+    div.sede-individual {
+      width: 95%; /* Ocupa casi todo el ancho en móviles */
+      padding: 8px; /* Espacio interno reducido */
+      margin: 10px auto; /* Centrado */
+      font-size: 1em;
+      display: block; /* Evita desbordes horizontales */
+      .nombreSede {
+        font-size: 1.2em;
+        margin: 20px 0 10px 0;
+        padding-top: 10px;
+      }
+    }
+    iframe {
+      max-width: 100%;
+      height: 200px; /* Menor altura en móviles */
+    }
+    p {
+      font-size: 1em;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  }
+}
+
+//Servicios
+
+@media (max-width: 800px) {
+  div.servicios-container {
+    div.servicios-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      div.visual {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        iframe,
+        img {
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      div.txtInfo {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      div.solo-texto.servicio {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+//productos
+@media(max-width: 800px){
+  div.container-cards{
+    margin-top: 15px;
+  }
+}
+
