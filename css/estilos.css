@@ -367,8 +367,74 @@ div.formulario-container section.formulario input[type=submit]:hover {
   }
 }
 @media (max-width: 800px) {
-  div.container-cards {
-    margin-top: 15px;
+  .cuerpoPrincipal-Productos {
+    padding: 10px;
+    margin-top: 50px;
+  }
+  .container-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .container-cards .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .container-cards .card img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .container-cards .card .card-body {
+    padding: 15px;
+  }
+  .container-cards .card .card-body .card-text {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 800px) {
+  main.sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 50px;
+  }
+  main.sobre-nosotros img.img-index {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  main.sobre-nosotros p.txtInfo {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  main.cuerpoPrincipal {
+    margin-top: 50px;
+    padding: 15px;
+    width: 95%;
+  }
+  main.cuerpoPrincipal img.img-index {
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+  }
+  main.cuerpoPrincipal .txtPrincipal {
+    padding: 10px;
+  }
+  main.cuerpoPrincipal .txtPrincipal p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    text-align: center;
+    margin: 15px auto;
+    width: 90%;
   }
 }
 
