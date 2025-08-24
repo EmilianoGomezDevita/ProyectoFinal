@@ -17,6 +17,14 @@ section.sobre-nosotros img.img-index, main.cuerpoPrincipal img.img-index {
   height: auto;
 }
 
+div.formulario-container section.formulario textarea, div.formulario-container section.formulario select, div.formulario-container section.formulario input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid #c49a7b;
+}
+
 /* Variables */
 /* Estilos generales */
 body {
@@ -196,9 +204,82 @@ section.sedes p {
   color: #8d6e63;
   font-size: 1.1em;
   margin: 15px 0;
-  background-color: var(--color-secundario);
   padding: 15px;
   border-radius: 8px;
+}
+
+/* servicios */
+div.servicios-container div.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+div.servicios-container div.servicios-grid div.visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.servicios-container div.servicios-grid div.visual img {
+  border-radius: 15px;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+div.servicios-container div.servicios-grid div.visual iframe {
+  height: 250px; /* Ajusta la altura para que coincida con el texto */
+  max-width: 90%;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+div.servicios-container div.servicios-grid div.txtInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Esto centra horizontalmente el contenido */
+}
+div.servicios-container div.servicios-grid div.servicioservicio.solo-texto {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 1em;
+}
+div.servicios-container div.servicios-grid .solo-texto {
+  display: grid;
+  grid-column: 1/span 2;
+}
+
+div.formulario-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+div.formulario-container section.formulario {
+  background-color: #f4e4d6;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px !important;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #5d4037;
+}
+div.formulario-container section.formulario label {
+  color: #5d4037;
+  font-weight: bold;
+  font-size: 14px;
+}
+div.formulario-container section.formulario input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: black;
+}
+div.formulario-container section.formulario input[type=submit]:hover {
+  background-color: #006064;
 }
 
 /*# sourceMappingURL=estilos.css.map */
