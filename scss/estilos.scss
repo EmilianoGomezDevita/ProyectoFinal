@@ -26,6 +26,16 @@
   margin: 10px;
   border: 1px solid #c49a7b;
 }
+/*Mixin*/
+@mixin rounded($radius: 10px) {
+  border-radius: $radius;
+}
+
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Variables */
 $body-Color: #5d4037;
@@ -57,7 +67,7 @@ header {
   img.logo {
     width: 70px;
     height: 70px;
-    border-radius: 50px;
+    @include rounded(50px);
   }
   h1.titulo {
     color: $titulos-Color;
@@ -99,7 +109,7 @@ footer {
         font-weight: bold;
         font-size: 16px;
         padding: 8px 12px;
-        border-radius: 6px;
+        @include rounded(6px);
         transition: background 0.2s;
       }
       a:hover {
@@ -133,7 +143,7 @@ main.cuerpoPrincipal {
   margin: 40px auto 0 auto;
   padding: 20px;
   background: #fff8f0;
-  border-radius: 16px;
+  @include rounded(16px);
   box-shadow: 0 2px 12px rgba(212, 165, 116, 0.08);
   img.img-index {
     @extend %img-index;
@@ -152,16 +162,15 @@ main.sobre-nosotros {
   margin: 40px auto 0 auto;
   padding: 20px;
   background: #fff8f0;
-  border-radius: 16px;
+  @include rounded(16px);
   box-shadow: 0 2px 12px rgba(212, 165, 116, 0.08);
   img.img-local {
     @extend %img-index;
   }
   p.txtInfo {
-    display: flex;
+    @include flex-center();
     flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Esto centra horizontalmente el contenido */
+    margin-top: 15px;
   }
 }
 
@@ -195,7 +204,7 @@ section.sedes {
   text-align: center;
   div.sede-individual {
     background-color: $footer-Color;
-    border-radius: 20px;
+    @include rounded(20px);
     padding: 10px; /* Espacio interno reducido */
     width: 50%; /* espacio que ocupa c/div */
     margin: 10px auto; /* Centrado y con poco margen */
@@ -218,7 +227,7 @@ section.sedes {
     width: 100%;
     max-width: 600px;
     height: 300px;
-    border-radius: 10px;
+    @include rounded(10px);
     margin: 15px auto;
     display: block;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -229,7 +238,7 @@ section.sedes {
     font-size: 1.1em;
     margin: 15px 0;
     padding: 15px;
-    border-radius: 8px;
+    @include rounded(8px);
   }
 }
 
@@ -242,11 +251,9 @@ div.servicios-container {
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     div.visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center();
       img {
-        border-radius: 15px;
+        @include rounded(15px);
         max-width: 80%;
         height: auto;
         margin: 0 auto;
@@ -254,15 +261,13 @@ div.servicios-container {
       iframe {
         height: 250px; /* Ajusta la altura para que coincida con el texto */
         max-width: 90%;
-        border-radius: 15px;
+        @include rounded(15px);
         margin: 0 auto;
       }
     }
     div.txtInfo {
-      display: flex;
+      @include flex-center();
       flex-direction: column;
-      justify-content: center;
-      align-items: center; /* Esto centra horizontalmente el contenido */
     }
     div.servicioservicio.solo-texto {
       width: 100%;
@@ -291,7 +296,7 @@ div.formulario-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
+    @include rounded(10px);
     box-shadow: #5d4037;
 
     label {
@@ -311,7 +316,7 @@ div.formulario-container {
     input[type="submit"] {
       width: 100%;
       padding: 10px;
-      border-radius: 5px;
+      @include rounded(5px);
       border-color: black;
     }
     input[type="submit"]:hover {
@@ -498,6 +503,7 @@ div.formulario-container {
 }
 
 /*Animaicones*/
+//index
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
@@ -512,3 +518,4 @@ div.formulario-container {
 .img-index {
   animation: fadeInZoom 1.5s ease-in-out;
 }
+

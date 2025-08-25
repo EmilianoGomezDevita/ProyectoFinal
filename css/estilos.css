@@ -25,6 +25,7 @@ div.formulario-container section.formulario textarea, div.formulario-container s
   border: 1px solid #c49a7b;
 }
 
+/*Mixin*/
 /* Variables */
 /* Estilos generales */
 body {
@@ -140,9 +141,10 @@ main.sobre-nosotros {
 }
 main.sobre-nosotros p.txtInfo {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Esto centra horizontalmente el contenido */
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
 }
 
 /* productos(main) */
@@ -238,9 +240,9 @@ div.servicios-container div.servicios-grid div.visual iframe {
 }
 div.servicios-container div.servicios-grid div.txtInfo {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Esto centra horizontalmente el contenido */
+  align-items: center;
+  flex-direction: column;
 }
 div.servicios-container div.servicios-grid div.servicioservicio.solo-texto {
   width: 100%;
