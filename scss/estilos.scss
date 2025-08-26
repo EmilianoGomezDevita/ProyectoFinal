@@ -188,15 +188,27 @@ div.container-cards {
     width: 18rem;
     margin-top: 15px;
     transition: transform 0.2s; /* opcional: para efecto hover */
-    &:hover {
-      transform: translateY(-20px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-    div.card-body {
-      height: auto;
-      overflow: hidden;
+    overflow: hidden;
+    div.card-background{
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      transform: scale(1.0); 
     }
   }
+  .card:hover .card-background {
+    transform: scale(1.15) translateZ(0);
+    background-size: 300px;
+  }
+}
+div.card-grid:hover > .card:not(:hover){
+  transform: scale(.9);
+}
+div.card-grid:hover > .card:not(:hover) .card-background,
+.card-grid:hover > .card:not(:hover) .card-category {
+   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
 /* Sedes (main) */
@@ -588,3 +600,39 @@ div.formulario-container {
     transform: rotate(2deg);
   }
 }
+
+// animacion tik tok
+// .card {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .card-background {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-position: center;
+//   transition: transform 0.5s ease, filter 0.5s ease;
+//   transform: scale(1.0);
+// }
+
+// .card-body {
+//   position: relative;
+//   z-index: 1;
+// }
+
+// .card:hover .card-background {
+//   transform: scale(1.15) translateZ(0);
+//   background-size: 300px;
+// }
+// .card-grid:hover > .card:not(:hover){
+//   transform: scale(.9);
+// }
+
+// .card-grid:hover > .card:not(:hover) .card-background,
+// .card-grid:hover > .card:not(:hover) .card-category {
+//    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+// }
