@@ -93,13 +93,13 @@
             <h2 class="subTitulo">Contacto</h2>
             <section class="formulario">
                 <form action="/submit" method="post" enctype="multipart/form-data">
-                    <label for="nombre">nombre</label>
-                    <input type="text" name="nombre" id="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input placeholder="Ingrese su nombre" type="text" name="nombre" id="nombre">
                     <label for="Email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input placeholder="Ingrese su email" type="email" name="email" id="email">
                     <label for="servicio">Tipo de servicio</label>
                     <select name="opcion" id="opcion">
-                    <option value="" disabled selected>Seleccione el tipo de servicio</option>
+                    <option value="" disabled selected>Seleccione una opcion</option>
                         <optgroup label="Servicio de reposteria">
                             <option value="torta">Torta personalizada</option>
                             <option value="evento">Menu para evento</option>
@@ -108,7 +108,7 @@
                             <option value="retiro">Take away</option>
                     </select>
                     <label for="nombre">Descripcion del pedido</label>
-                    <textarea name="descripcoin" id="descripcion"></textarea>
+                    <textarea placeholder="Ingrese su descripcion" name="descripcoin" id="descripcion"></textarea>
 
                     <input type="submit" value="Enviar" class="btn btn-primary">
                 </form>

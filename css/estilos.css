@@ -282,6 +282,9 @@ div.formulario-container section.formulario label {
   font-weight: bold;
   font-size: 14px;
 }
+div.formulario-container section.formulario input {
+  field-sizing: content;
+}
 div.formulario-container section.formulario select {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -304,6 +307,9 @@ div.formulario-container section.formulario select option {
 }
 div.formulario-container section.formulario select:hover {
   background-color: #f4e4d6 !important;
+}
+div.formulario-container section.formulario textarea {
+  field-sizing: content;
 }
 div.formulario-container section.formulario input[type=submit] {
   width: 100%;

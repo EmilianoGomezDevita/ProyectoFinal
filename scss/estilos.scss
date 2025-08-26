@@ -310,6 +310,7 @@ div.formulario-container {
     }
     input {
       @extend %type-form;
+      field-sizing: content;
     }
     select {
       @extend %type-form;
@@ -340,6 +341,7 @@ div.formulario-container {
     }
     textarea {
       @extend %type-form;
+      field-sizing: content;
     }
     input[type="submit"] {
       width: 100%;
