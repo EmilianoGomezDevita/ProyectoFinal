@@ -34,7 +34,7 @@
   border-radius: $radius;
 }
 
-@mixin flex-center{
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -337,7 +337,6 @@ div.formulario-container {
       &:hover {
         background-color: #f4e4d6 !important;
       }
-      
     }
     textarea {
       @extend %type-form;
@@ -444,6 +443,10 @@ div.formulario-container {
       }
     }
   }
+  select {
+    padding: 14px 15px; /* Más grande para touch */
+    font-size: 16px; /* Evita zoom en iOS */
+  }
 }
 
 //productos
@@ -511,16 +514,16 @@ div.formulario-container {
     margin-top: 50px; // Espacio para el navbar fijo
     padding: 15px;
     width: 95%;
-    
+
     img.img-index {
       width: 90%;
       max-width: 350px;
       margin: 15px auto;
     }
-    
+
     .txtPrincipal {
       padding: 10px;
-      
+
       p {
         font-size: 0.95em;
         line-height: 1.5;
@@ -550,40 +553,38 @@ div.formulario-container {
 }
 
 //cards
-.card{
+.card {
   animation: card 2s ease-in 0s 1 normal forwards;
 }
 
 @keyframes card {
-	0%,
-	100% {
-		transform: rotate(0deg);
-		transform-origin: 50% 0;
-	}
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
 
-	10% {
-		transform: rotate(2deg);
-	}
+  10% {
+    transform: rotate(2deg);
+  }
 
-	20%,
-	40%,
-	60% {
-		transform: rotate(-4deg);
-	}
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
 
-	30%,
-	50%,
-	70% {
-		transform: rotate(4deg);
-	}
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
 
-	80% {
-		transform: rotate(-2deg);
-	}
+  80% {
+    transform: rotate(-2deg);
+  }
 
-	90% {
-		transform: rotate(2deg);
-	}
+  90% {
+    transform: rotate(2deg);
+  }
 }
-
-

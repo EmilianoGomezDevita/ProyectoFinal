@@ -395,6 +395,10 @@ div.formulario-container section.formulario input[type=submit]:hover {
     text-align: center;
     font-size: 1em;
   }
+  select {
+    padding: 14px 15px; /* Más grande para touch */
+    font-size: 16px; /* Evita zoom en iOS */
+  }
 }
 @media (max-width: 800px) {
   .cuerpoPrincipal-Productos {
