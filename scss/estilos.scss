@@ -187,28 +187,16 @@ div.container-cards {
   div.card {
     width: 18rem;
     margin-top: 15px;
-    transition: transform 0.2s; /* opcional: para efecto hover */
-    overflow: hidden;
-    div.card-background{
-      width: 100%;
-      height: 200px;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.5s ease, filter 0.5s ease;
-      transform: scale(1.0); 
+    transition: transform 0.5s; /* opcional: para efecto hover */
+    &:hover {
+      transform: translateY(-120px);
+      box-shadow: 0 4px 15px rgb(255, 204, 160);
+    }
+    div.card-body {
+      height: auto;
+      overflow: hidden;
     }
   }
-  .card:hover .card-background {
-    transform: scale(1.15) translateZ(0);
-    background-size: 300px;
-  }
-}
-div.card-grid:hover > .card:not(:hover){
-  transform: scale(.9);
-}
-div.card-grid:hover > .card:not(:hover) .card-background,
-.card-grid:hover > .card:not(:hover) .card-category {
-   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
 /* Sedes (main) */
