@@ -317,6 +317,8 @@ div.formulario-container {
       cursor: pointer;
       transition: all 0.3s ease;
       appearance: none; /* Elimina el estilo por defecto del navegador */
+      -webkit-appearance: none;/* Para compatibilidad con navegadores más antiguos (Safari) */
+      -moz-appearance: none; /* Para compatibilidad con Firefox */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12L8 12z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 15px center;
@@ -326,15 +328,12 @@ div.formulario-container {
         font-weight: bold;
         color: #d4a574;
         font-style: normal;
-        padding: 5px;
       }
 
       option {
-        padding: 10px;
         background-color: #fff8f0;
         color: #5d4037;
       }
-
       &:hover {
         background-color: #f4e4d6 !important;
       }

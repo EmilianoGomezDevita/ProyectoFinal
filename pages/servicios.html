@@ -98,12 +98,15 @@
                     <label for="Email">Email</label>
                     <input placeholder="Ingrese su email" type="email" name="email" id="email">
                     <label for="servicio">Tipo de servicio</label>
-                    <select name="opcion" id="opcion">
-                    <option value="" disabled selected>Seleccione una opcion</option>
-                        <optgroup label="Servicio de reposteria">
+                    <select name="servicio" id="servicio">
+                    <option value="" disabled selected>Elige el tipo de servicio</option>
+                        <!-- grupo reposteria -->
+                        <optgroup label="🎂Servicio de reposteria">
                             <option value="torta">Torta personalizada</option>
                             <option value="evento">Menu para evento</option>
-                        <optgroup label="Servicio de entrega">
+                        </optgroup>
+                        <!-- grupo delivery --> 
+                        <optgroup label="🛵Servicio de entrega">
                             <option value="delivery">Pedido</option>
                             <option value="retiro">Take away</option>
                     </select>
