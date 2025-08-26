@@ -286,6 +286,7 @@ div.formulario-container section.formulario input[type=submit] {
 }
 div.formulario-container section.formulario input[type=submit]:hover {
   background-color: #006064;
+  transition: 0.3s;
 }
 
 /* RESPONSIVE */
