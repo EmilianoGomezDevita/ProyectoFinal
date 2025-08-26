@@ -21,10 +21,13 @@
 
 %type-form {
   width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  margin: 10px;
-  border: 1px solid #c49a7b;
+  padding: 12px 15px;
+  border: 2px solid #c49a7b;
+  border-radius: 8px;
+  background-color: #fff8f0;
+  color: #5d4037;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
 }
 /*Mixin*/
 @mixin rounded($radius: 10px) {
@@ -134,6 +137,7 @@ h1.titulo {
   font-size: 25px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Index(main) */
@@ -182,10 +186,10 @@ div.container-cards {
   flex-direction: row;
   div.card {
     width: 18rem;
-    margin: 0; /* quita el margen que tenías con mt-3 */
+    margin-top: 15px;
     transition: transform 0.2s; /* opcional: para efecto hover */
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-20px);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
     div.card-body {
@@ -309,6 +313,31 @@ div.formulario-container {
     }
     select {
       @extend %type-form;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      appearance: none; /* Elimina el estilo por defecto del navegador */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12L8 12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 16px;
+
+      optgroup {
+        font-weight: bold;
+        color: #d4a574;
+        font-style: normal;
+        padding: 5px;
+      }
+
+      option {
+        padding: 10px;
+        background-color: #fff8f0;
+        color: #5d4037;
+      }
+
+      &:hover {
+        background-color: #f4e4d6 !important;
+      }
+      
     }
     textarea {
       @extend %type-form;
@@ -317,10 +346,10 @@ div.formulario-container {
       width: 100%;
       padding: 10px;
       @include rounded(5px);
-      border-color: black;
+      border-color: whitesmoke;
     }
     input[type="submit"]:hover {
-      background-color: #006064;
+      background-color: #d4a574;
       transition: 0.3s;
     }
   }
@@ -519,4 +548,42 @@ div.formulario-container {
 .img-index {
   animation: fadeInZoom 1.5s ease-in-out;
 }
+
+//cards
+.card{
+  animation: card 2s ease-in 0s 1 normal forwards;
+}
+
+@keyframes card {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 0;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
 

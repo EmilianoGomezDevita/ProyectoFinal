@@ -99,9 +99,13 @@
                     <input type="email" name="email" id="email">
                     <label for="servicio">Tipo de servicio</label>
                     <select name="opcion" id="opcion">
-                        <option value="torta">Torta personalizada</option>
-                        <option value="evento">Menu para evento</option>
-                        <option value="delivery">Pedido</option>
+                    <option value="" disabled selected>Seleccione el tipo de servicio</option>
+                        <optgroup label="Servicio de reposteria">
+                            <option value="torta">Torta personalizada</option>
+                            <option value="evento">Menu para evento</option>
+                        <optgroup label="Servicio de entrega">
+                            <option value="delivery">Pedido</option>
+                            <option value="retiro">Take away</option>
                     </select>
                     <label for="nombre">Descripcion del pedido</label>
                     <textarea name="descripcoin" id="descripcion"></textarea>
