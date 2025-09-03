@@ -39,10 +39,9 @@ body {
 
 /* Header */
 header {
-  background-color: #f4e4d6;
+  background: #f4e4d6;
 }
-
-.logo-titulo {
+header .logo-titulo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,12 +50,12 @@ header {
   padding: 15px;
   /* Logo */
 }
-.logo-titulo img.logo {
+header .logo-titulo img.logo {
   width: 70px;
   height: 70px;
   border-radius: 50px;
 }
-.logo-titulo h1.titulo {
+header .logo-titulo h1.titulo {
   color: #d4a574;
   font-size: 30px;
   text-align: center;
@@ -76,31 +75,19 @@ header h3 {
 
 /* Footer */
 footer {
-  background-color: #f4e4d6;
-  margin-top: 15px;
-  padding: 20px 10px;
+  color: #444444; /* gris oscuro suave */
+  background-image: linear-gradient(to bottom, #ffccee, #ffd3f0, #ffd9f2, #ffe0f4, #ffe6f6);
 }
-footer div.enlacesRelativos {
-  width: 100%;
-}
-footer div.enlacesRelativos ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-}
-footer div.enlacesRelativos li a {
-  color: #5d4037;
+footer a.text-dark {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.2s;
 }
-footer div.enlacesRelativos li a:hover {
-  color: #b8956a;
+footer a.text-dark:hover {
+  color: #ee54c0 !important;
   text-decoration: underline;
-  background: #f4e4d6;
+  font-weight: bold;
+}
+footer .text-center {
+  color: #444444 !important;
 }
 
 /* Títulos */
@@ -152,24 +139,50 @@ main.sobre-nosotros p.txtInfo {
 }
 
 /* productos(main) */
-div.container-cards {
+section.container-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
 }
-div.container-cards div.card {
+section.container-cards div.card {
   width: 18rem;
   margin-top: 15px;
   transition: transform 0.5s; /* opcional: para efecto hover */
 }
-div.container-cards div.card:hover {
+section.container-cards div.card:hover {
   transform: translateY(-120px);
   box-shadow: 0 4px 15px rgb(255, 204, 160);
 }
-div.container-cards div.card div.card-body {
+section.container-cards div.card h3.card-title {
+  color: #d4a574;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+}
+section.container-cards div.card div.card-body {
   height: auto;
   overflow: hidden;
+}
+
+article.btn-to-form {
+  text-align: center;
+  margin-top: 20px;
+}
+article.btn-to-form .btn-primary {
+  background-color: #d4a574;
+  border-color: #d4a574;
+  color: #fff;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+article.btn-to-form .btn-primary:hover {
+  background-color: #c49a7b;
+  border-color: #c49a7b;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Sedes (main) */
@@ -188,13 +201,19 @@ section.sedes div.sede-individual {
   box-sizing: border-box;
   display: inline-block; /* Se ajusta al contenido */
 }
-section.sedes div.sede-individual .nombreSede {
+section.sedes div.sede-individual h2.nombreSede {
   color: #d4a574;
   font-size: 1.8em;
   font-weight: bold;
   margin: 30px 0 15px 0;
   text-align: center;
   padding-top: 20px;
+}
+section.sedes div.sede-individual h3.direccion {
+  color: #8d6e63;
+  font-size: 1.1em;
+  margin: 15px 0;
+  padding: 15px;
 }
 section.sedes div.sede-individual:first-child {
   border-top: none;
@@ -211,7 +230,7 @@ section.sedes iframe {
 }
 section.sedes p {
   text-align: center;
-  color: #8d6e63;
+  color: texto-Color;
   font-size: 1.1em;
   margin: 15px 0;
   padding: 15px;
@@ -257,6 +276,7 @@ div.servicios-container div.servicios-grid div.servicioservicio.solo-texto {
 div.servicios-container div.servicios-grid .solo-texto {
   display: grid;
   grid-column: 1/span 2;
+  margin-top: 15px;
 }
 
 div.formulario-container {
@@ -289,8 +309,6 @@ div.formulario-container section.formulario select {
   cursor: pointer;
   transition: all 0.3s ease;
   appearance: none; /* Elimina el estilo por defecto del navegador */
-  -webkit-appearance: none; /* Para compatibilidad con navegadores más antiguos (Safari) */
-  -moz-appearance: none; /* Para compatibilidad con Firefox */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12L8 12z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 15px center;
@@ -342,8 +360,6 @@ div.formulario-container section.formulario input[type=submit]:hover {
     width: 100%;
     text-align: left;
   }
-}
-@media (max-width: 800px) {
   section.sedes {
     padding: 10px;
     margin: 15px 0;
@@ -369,8 +385,6 @@ div.formulario-container section.formulario input[type=submit]:hover {
     padding: 10px;
     margin: 10px 0;
   }
-}
-@media (max-width: 800px) {
   div.servicios-container div.servicios-grid {
     display: flex;
     flex-direction: column;
@@ -403,10 +417,8 @@ div.formulario-container section.formulario input[type=submit]:hover {
   }
   select {
     padding: 14px 15px; /* Más grande para touch */
-    font-size: 16px; /* Evita zoom en iOS */
+    font-size: 16px;
   }
-}
-@media (max-width: 800px) {
   .cuerpoPrincipal-Productos {
     padding: 10px;
     margin-top: 50px;

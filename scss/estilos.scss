@@ -46,6 +46,7 @@ $color-Fondo: #faf8f5;
 $footer-Color: #f4e4d6;
 $enlacesHover-Color: #b8956a;
 $titulos-Color: #d4a574;
+$texto-Color: #8d6e63;
 
 /* Estilos generales */
 body {
@@ -56,27 +57,26 @@ body {
 
 /* Header */
 header {
-  background-color: $footer-Color;
-}
-
-.logo-titulo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  margin-top: 70px;
-  padding: 15px;
-  /* Logo */
-  img.logo {
-    width: 70px;
-    height: 70px;
-    @include rounded(50px);
-  }
-  h1.titulo {
-    color: $titulos-Color;
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
+  background: $footer-Color;
+  .logo-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 70px;
+    padding: 15px;
+    /* Logo */
+    img.logo {
+      width: 70px;
+      height: 70px;
+      @include rounded(50px);
+    }
+    h1.titulo {
+      color: $titulos-Color;
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
   }
 }
 
@@ -93,34 +93,26 @@ header h3 {
 
 /* Footer */
 footer {
-  background-color: $footer-Color;
-  margin-top: 15px;
-  padding: 20px 10px;
-
-  div.enlacesRelativos {
-    width: 100%;
-
-    ul {
-      display: flex;
-      justify-content: space-evenly;
-      list-style: none;
+  color: #444444; /* gris oscuro suave */
+  background-image: linear-gradient(
+    to bottom,
+    #ffccee,
+    #ffd3f0,
+    #ffd9f2,
+    #ffe0f4,
+    #ffe6f6
+  );
+  a.text-dark {
+    text-decoration: none;
+    &:hover {
+      color: #ee54c0 !important;
+      text-decoration: underline;
+      font-weight: bold;
     }
-    li {
-      a {
-        color: $body-Color;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        padding: 8px 12px;
-        @include rounded(6px);
-        transition: background 0.2s;
-      }
-      a:hover {
-        color: $enlacesHover-Color;
-        text-decoration: underline;
-        background: $footer-Color;
-      }
-    }
+  }
+
+  .text-center {
+    color: #444444 !important;
   }
 }
 
@@ -154,7 +146,7 @@ main.cuerpoPrincipal {
   }
   .txtPrincipal p {
     font-size: 15px;
-    color: #8d6e63;
+    color: $texto-Color;
     text-align: center;
   }
 }
@@ -179,7 +171,7 @@ main.sobre-nosotros {
 }
 
 /* productos(main) */
-div.container-cards {
+section.container-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -192,9 +184,36 @@ div.container-cards {
       transform: translateY(-120px);
       box-shadow: 0 4px 15px rgb(255, 204, 160);
     }
+    h3.card-title {
+      color: $titulos-Color;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
+    }
     div.card-body {
       height: auto;
       overflow: hidden;
+    }
+  }
+}
+article.btn-to-form {
+  text-align: center;
+  margin-top: 20px;
+
+  .btn-primary {
+    background-color: #d4a574;
+    border-color: #d4a574;
+    color: #fff;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #c49a7b;
+      border-color: #c49a7b;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
   }
 }
@@ -214,13 +233,19 @@ section.sedes {
     margin: 10px auto; /* Centrado y con poco margen */
     box-sizing: border-box;
     display: inline-block; /* Se ajusta al contenido */
-    .nombreSede {
+    h2.nombreSede {
       color: $titulos-Color;
       font-size: 1.8em;
       font-weight: bold;
       margin: 30px 0 15px 0;
       text-align: center;
       padding-top: 20px;
+    }
+    h3.direccion {
+      color: $texto-Color;
+      font-size: 1.1em;
+      margin: 15px 0;
+      padding: 15px;
     }
     &:first-child {
       border-top: none;
@@ -238,7 +263,7 @@ section.sedes {
   }
   p {
     text-align: center;
-    color: #8d6e63;
+    color: texto-Color;
     font-size: 1.1em;
     margin: 15px 0;
     padding: 15px;
@@ -282,6 +307,7 @@ div.servicios-container {
     .solo-texto {
       display: grid;
       grid-column: 1 / span 2;
+      margin-top: 15px;
     }
   }
 }
@@ -317,8 +343,6 @@ div.formulario-container {
       cursor: pointer;
       transition: all 0.3s ease;
       appearance: none; /* Elimina el estilo por defecto del navegador */
-      -webkit-appearance: none;/* Para compatibilidad con navegadores más antiguos (Safari) */
-      -moz-appearance: none; /* Para compatibilidad con Firefox */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L2 6h12L8 12z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 15px center;
@@ -356,8 +380,6 @@ div.formulario-container {
 }
 
 /* RESPONSIVE */
-
-// footer Responsive para celulares
 @media (max-width: 800px) {
   footer {
     .enlacesRelativos {
@@ -379,10 +401,7 @@ div.formulario-container {
       }
     }
   }
-}
-
-//Sedes
-@media (max-width: 800px) {
+  // SEDES
   section.sedes {
     padding: 10px;
     margin: 15px 0;
@@ -408,10 +427,7 @@ div.formulario-container {
       margin: 10px 0;
     }
   }
-}
-
-//Servicios
-@media (max-width: 800px) {
+  //Servicios
   div.servicios-container {
     div.servicios-grid {
       display: flex;
@@ -438,6 +454,7 @@ div.formulario-container {
       }
       div.solo-texto.servicio {
         width: 100%;
+        grid-column: auto;
         margin: 20px auto;
         text-align: center;
         font-size: 1em;
@@ -446,12 +463,9 @@ div.formulario-container {
   }
   select {
     padding: 14px 15px; /* Más grande para touch */
-    font-size: 16px; /* Evita zoom en iOS */
+    font-size: 16px;
   }
-}
-
-//productos
-@media (max-width: 800px) {
+  //productos
   .cuerpoPrincipal-Productos {
     padding: 10px;
     margin-top: 50px;
@@ -482,6 +496,7 @@ div.formulario-container {
     }
   }
 }
+
 //infolocal
 @media (max-width: 800px) {
   main.sobre-nosotros {
@@ -589,39 +604,3 @@ div.formulario-container {
     transform: rotate(2deg);
   }
 }
-
-// animacion tik tok
-// .card {
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .card-background {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-size: cover;
-//   background-position: center;
-//   transition: transform 0.5s ease, filter 0.5s ease;
-//   transform: scale(1.0);
-// }
-
-// .card-body {
-//   position: relative;
-//   z-index: 1;
-// }
-
-// .card:hover .card-background {
-//   transform: scale(1.15) translateZ(0);
-//   background-size: 300px;
-// }
-// .card-grid:hover > .card:not(:hover){
-//   transform: scale(.9);
-// }
-
-// .card-grid:hover > .card:not(:hover) .card-background,
-// .card-grid:hover > .card:not(:hover) .card-category {
-//    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-// }
