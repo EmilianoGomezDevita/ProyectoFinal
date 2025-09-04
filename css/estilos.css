@@ -8,7 +8,7 @@
 }
 
 /* Extend */
-main.sobre-nosotros img.img-local, main.cuerpoPrincipal img.img-index {
+section.container-cards div.card img.img-fluid, main.sobre-nosotros img.img-local, main.cuerpoPrincipal img.img-index {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -164,7 +164,6 @@ section.container-cards div.card div.card-body {
   height: auto;
   overflow: hidden;
 }
-
 article.btn-to-form {
   text-align: center;
   margin-top: 20px;
@@ -411,6 +410,7 @@ div.formulario-container section.formulario input[type=submit]:hover {
   }
   div.servicios-container div.servicios-grid div.solo-texto.servicio {
     width: 100%;
+    grid-column: auto;
     margin: 20px auto;
     text-align: center;
     font-size: 1em;

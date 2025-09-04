@@ -194,6 +194,9 @@ section.container-cards {
       height: auto;
       overflow: hidden;
     }
+    img.img-fluid{
+      @extend %img-index;
+    }
   }
 }
 article.btn-to-form {
