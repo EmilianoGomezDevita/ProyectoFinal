@@ -154,7 +154,7 @@ section.container-cards div.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 15px rgb(255, 204, 160);
 }
-section.container-cards div.card h3.card-title {
+section.container-cards div.card h2.card-title {
   color: #d4a574;
   font-size: 1.5em;
   text-align: center;

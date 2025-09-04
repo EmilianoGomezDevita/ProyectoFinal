@@ -184,7 +184,7 @@ section.container-cards {
       transform: translateY(-10px);
       box-shadow: 0 4px 15px rgb(255, 204, 160);
     }
-    h3.card-title {
+    h2.card-title {
       color: $titulos-Color;
       font-size: 1.5em;
       text-align: center;
@@ -193,6 +193,12 @@ section.container-cards {
     div.card-body {
       height: auto;
       overflow: hidden;
+      p.card-text {
+        color: $texto-Color;
+        font-size: 1em !important;
+        margin: 15px 0;
+        padding: 15px;
+      }
     }
     img.img-fluid{
       display: block;
