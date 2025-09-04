@@ -151,7 +151,7 @@ section.container-cards div.card {
   transition: transform 0.5s; /* opcional: para efecto hover */
 }
 section.container-cards div.card:hover {
-  transform: translateY(-120px);
+  transform: translateY(-10px);
   box-shadow: 0 4px 15px rgb(255, 204, 160);
 }
 section.container-cards div.card h3.card-title {
@@ -168,6 +168,7 @@ section.container-cards div.card img.img-fluid {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
