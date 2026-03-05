@@ -179,6 +179,10 @@ section.container-cards {
   div.card {
     width: 18rem;
     margin-top: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
     transition: transform 0.5s; /* opcional: para efecto hover */
     &:hover {
       transform: translateY(-10px);
@@ -219,7 +223,8 @@ section.container-cards {
       border-radius: 50px;
       padding: 12px 25px;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      letter-spacing: normal;
     }
   }
 }
