@@ -1,18 +1,20 @@
 console.log("JS conectado")
 
 const botonesCompra = document.querySelectorAll(".btn-comprar");
+const toast = document.getElementById("toast");
 
-botonesCompra.forEach(function(boton) {
-    boton.addEventListener("click", function() {
-        // Buscamos el elemento .mensaje que es hermano del botón clickeado
-        const mensajeLocal = boton.parentElement.querySelector(".mensaje");
-
-        if (mensajeLocal) {
-            mensajeLocal.textContent = "Producto agregado al carrito";
-            
-            setTimeout(function() {
-                mensajeLocal.textContent = "";
-            }, 3000);
-        }
+botonesCompra.forEach(boton => {
+    boton.addEventListener("click", () => {
+        // Reiniciamos la animación si ya estaba corriendo
+        toast.classList.remove("show");
+        void toast.offsetWidth; // Truco para resetear animaciones CSS
+        
+        toast.classList.add("show");
+        
+        // La animación de CSS se encarga de ocultarlo, 
+        // pero lo limpiamos en JS después de 3s
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 3000);
     });
 });
