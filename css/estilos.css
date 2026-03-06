@@ -191,7 +191,7 @@ section.container-cards div.card div.btn-agregarQuitar {
 }
 section.container-cards div.card div.btn-agregarQuitar button.btn-comprar {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
   background-color: #d4a574;
@@ -205,7 +205,7 @@ section.container-cards div.card div.btn-agregarQuitar button.btn-comprar {
 }
 section.container-cards div.card div.btn-agregarQuitar button.btn-quitar {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 5px;
   background-color: #d4a574;
