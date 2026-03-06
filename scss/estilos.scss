@@ -212,20 +212,42 @@ section.container-cards {
       max-width: 100%;
       height: auto;
     }
-    button.btn-comprar{
-      text-align: center;
-      margin-bottom: 40px;
-      margin-left: 25px;
-      margin-right: 25px;
-      background-color: #d4a574;
-      border-color: #d4a574;
-      color:#fff ;
-      border-radius: 50px;
-      padding: 12px 25px;
-      font-weight: bold;
-      font-size: 1.3rem;
-      letter-spacing: normal;
+    div.btn-agregarQuitar{
+      display: flex;       // Alinea los hijos en eje horizontal
+      flex-direction: row; // Asegura que estén uno al lado del otro
+      justify-content: center; // Los centra dentro de la card
+      gap: 5px;           // Crea una separación elegante entre ambos
+      margin-top: 15px;
+      button.btn-comprar{
+        text-align: center;
+        margin-bottom: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-color: #d4a574;
+        border-color: #d4a574;
+        color:#fff ;
+        border-radius: 50px;
+        padding: 12px 25px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        letter-spacing: normal;
+        }
+        button.btn-quitar{
+          text-align: center;
+          margin-bottom: 40px;
+          margin-left: 5px;
+          margin-right: 5px;
+          background-color: #d4a574;
+          border-color: #d4a574;
+          color:#fff ;
+          border-radius: 50px;
+          padding: 12px 25px;
+          font-weight: bold;
+          font-size: 1.3rem;
+          letter-spacing: normal;
+        }
     }
+    
   }
 }
 article.btn-to-form {

@@ -182,11 +182,32 @@ section.container-cards div.card img.img-fluid {
   max-width: 100%;
   height: auto;
 }
-section.container-cards div.card button.btn-comprar {
+section.container-cards div.card div.btn-agregarQuitar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+section.container-cards div.card div.btn-agregarQuitar button.btn-comprar {
   text-align: center;
   margin-bottom: 40px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #d4a574;
+  border-color: #d4a574;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: normal;
+}
+section.container-cards div.card div.btn-agregarQuitar button.btn-quitar {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: #d4a574;
   border-color: #d4a574;
   color: #fff;
