@@ -1,11 +1,17 @@
 console.log("JS conectado")
 
-//mensaje al apretar el boton comprar en productis.html
+//carrito sin productos
+const toastSinProd = document.getElementById("toastSinProd");
+
+//suamr producto al carrito
 const botonesCompra = document.querySelectorAll(".btn-comprar");
 const toast = document.getElementById("toast");
-const contadorProd = document.getElementById("carritoContador")
+const contadorProd = document.getElementById("carritoContador");
+//restar producto del carrito
+const restarProd = document.querySelectorAll(".btn-quitar");
+const toastRestar = document.getElementById("toastRestar");
 
-console.log(contadorProd)
+
 
 let contador = 0;
 
@@ -28,13 +34,39 @@ botonesCompra.forEach(boton => {
     });
 });
 
-botonesCompra.forEach(boton => {
-    boton.addEventListener("clik", function aumentarContador(){
-        contador++;
-        contadorProd.textContent = contador;
+restarProd.forEach(botonRestar => {
+    console.log("evento conectado");
+    botonRestar.addEventListener("click", () => {
+
+        console.log("click restar");
+
+        if(contador === 0){
+            toastSinProd.classList.remove("show");
+            void toastSinProd.offsetWidth;
+            toastSinProd.classList.add("show")
+
+            setTimeout(() => {
+                toastSinProd.classList.remove("show");
+            }, 3000);
+            return;
+        }
+
+        toastRestar.classList.remove("show");
+        void toastRestar.offsetWidth; // Truco para resetear animaciones CSS
+        toastRestar.classList.add("show");
+
+        setTimeout(() => {
+            toastRestar.classList.remove("show");
+        }, 3000);
+
+
+        contador--;
+        contadorProd.textContent = "Productos en carrito 🛒: " + contador;
     });
 
 })
+
+console.log(restarProd)
 
 //contador de productos
 

@@ -262,6 +262,34 @@ article.btn-to-form {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.toast-mensaje-restar{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a7a528;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: none; /* Oculto por defecto */
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.toast-mensaje-sin-prod{
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2850a7;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
 .show {
     display: block;
     animation: fadeInOut 3s forwards;
